@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tetiana's 23rd Birthday!</title>
-
+    <!-- Підключення шрифтів Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
-    
+    <!-- Підключення файлу стилів -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Верхній заголовок над карткою -->
+    <header class="page-header">
+        <h1>LANDING PAGE</h1>
+        <p>Birthday</p>
+    </header>
 
-
+    <!-- Головна синя картка -->
     <main class="birthday-card">
         
-    
+        <!-- Декоративні елементи -->
         <svg class="decor-blob-top-left" viewBox="0 0 200 250" fill="none">
             <path d="M0 0H120C135 30 125 65 95 70C65 75 40 50 25 65C10 80 45 100 85 110C125 120 130 160 95 170C60 180 35 155 25 170C15 185 55 210 45 235C35 255 15 250 0 245V0Z" fill="#FCB913"/>
         </svg>
@@ -43,7 +48,6 @@
 
         <div class="decor-grid-right"></div>
 
-    
         <div class="yellow-backdrops">
             <span class="y-blob blob-1"></span>
             <span class="y-blob blob-2"></span>
@@ -51,7 +55,7 @@
             <span class="y-blob blob-4"></span>
         </div>
 
-
+        <!-- Навігація -->
         <nav class="navbar">
             <ul class="nav-links">
                 <li><a href="#" class="active" data-modal="home">HOME</a></li>
@@ -71,10 +75,10 @@
             </div>
         </nav>
 
-
+        <!-- Основний контент картки -->
         <div class="card-content">
             
-       
+            <!-- Ліва колонка: Заголовок і текст -->
             <div class="left-col">
                 <h2 class="hero-title">
                     <span>Tetiana’s</span>
@@ -85,11 +89,14 @@
                 </p>
                 <div class="action-buttons">
                     <button class="btn-rsvp" id="openWishBtn">ВІТАННЯ 🎉</button>
-                    
+                    <label for="photoUpload" class="btn-upload" title="Завантажити справжнє фото Тетяни">
+                        📷 Замінити фото
+                        <input type="file" id="photoUpload" accept="image/*" hidden>
+                    </label>
                 </div>
             </div>
 
-
+            <!-- Центральна колонка: Фото + торт -->
             <div class="center-col">
                 <div class="sticker-wrapper">
                     <div class="party-hat"></div>
@@ -98,7 +105,6 @@
                         <img id="tetianaPhoto" src="photo_2026-06-19_19-59-59.png" alt="Тетяна">
                     </div>
 
-              
                     <div class="cake-container" id="cakeWidget" title="Натисни, щоб задути свічки!">
                         <div class="candles">
                             <div class="candle"><span class="flame"></span></div>
@@ -113,7 +119,7 @@
                 </div>
             </div>
 
-   
+            <!-- Права колонка: Дата / Вік -->
             <div class="right-col">
                 <div class="date-badge">
                     <div class="pink-circle"></div>
@@ -126,19 +132,18 @@
         </div>
     </main>
 
-
+    <!-- Модальне вікно -->
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal-window">
             <button class="modal-close" id="closeModalBtn">&times;</button>
             <h3 id="modalTitle">З Днем Народження, Тетяно! 🎂</h3>
             <div id="modalBody">
                 <p>Вітаю з 23-річчям! Твоя психологічна освіта була чудовим фундаментом ще до нашої спільної роботи в дитячій школі програмування.</p>
-                <p>Дякую за те, що була таким крутим менеджером і вміла розрулити будь-яку ситуацію з холодною головою та теплом.</p>
             </div>
         </div>
     </div>
 
- 
+    <!-- Скрипт -->
     <script>
         const modalContent = {
             home: {
@@ -203,19 +208,17 @@
             });
         });
 
-
         const cakeWidget = document.getElementById('cakeWidget');
         cakeWidget.addEventListener('click', () => {
             cakeWidget.classList.toggle('blown');
             const hint = cakeWidget.querySelector('.cake-hint');
             if (cakeWidget.classList.contains('blown')) {
-                hint.textContent = "Бажання загадано! 🎉 (натисни, щоб запалити)";
+                hint.textContent = "Бажання загадано! 🎉";
             } else {
                 hint.textContent = "Натисни, щоб задути свічки ✨";
             }
         });
 
- 
         const photoUpload = document.getElementById('photoUpload');
         const tetianaPhoto = document.getElementById('tetianaPhoto');
         photoUpload.addEventListener('change', (e) => {
