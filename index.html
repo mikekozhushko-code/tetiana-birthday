@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetiana's 23rd Birthday!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <header class="page-header">
+        <h1>LANDING PAGE</h1>
+        <p>Birthday</p>
+    </header>
+
+
+    <main class="birthday-card">
+        
+    
+        <svg class="decor-blob-top-left" viewBox="0 0 200 250" fill="none">
+            <path d="M0 0H120C135 30 125 65 95 70C65 75 40 50 25 65C10 80 45 100 85 110C125 120 130 160 95 170C60 180 35 155 25 170C15 185 55 210 45 235C35 255 15 250 0 245V0Z" fill="#FCB913"/>
+        </svg>
+
+        <svg class="decor-flower-left" viewBox="0 0 100 100" fill="none">
+            <path d="M50 50 C30 20, 70 20, 50 50 C80 30, 80 70, 50 50 C80 80, 40 90, 50 50 C20 80, 10 40, 50 50 C20 20, 40 10, 50 50 Z" stroke="#ffffff" stroke-width="2" fill="none"/>
+            <circle cx="50" cy="50" r="5" stroke="#ffffff" stroke-width="2"/>
+        </svg>
+
+        <div class="decor-plus-grid">
+            <span>+</span><span>+</span><span>+</span>
+            <span>+</span><span>+</span><span>+</span>
+            <span>+</span><span>+</span><span>+</span>
+        </div>
+
+        <svg class="decor-flower-bottom" viewBox="0 0 100 100" fill="none">
+            <path d="M50 50 C35 10, 65 10, 50 50 C90 25, 90 60, 50 50 C85 85, 50 95, 50 50 C15 90, 15 55, 50 50 C10 25, 35 10, 50 50 Z" stroke="#ffffff" stroke-width="2"/>
+        </svg>
+
+        <svg class="decor-flower-right" viewBox="0 0 100 100" fill="none">
+            <path d="M50 50 C35 10, 65 10, 50 50 C90 25, 90 60, 50 50 C85 85, 50 95, 50 50 C15 90, 15 55, 50 50 C10 25, 35 10, 50 50 Z" stroke="#ffffff" stroke-width="2"/>
+        </svg>
+
+        <div class="decor-grid-right"></div>
+
+    
+        <div class="yellow-backdrops">
+            <span class="y-blob blob-1"></span>
+            <span class="y-blob blob-2"></span>
+            <span class="y-blob blob-3"></span>
+            <span class="y-blob blob-4"></span>
+        </div>
+
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#" class="active" data-modal="home">HOME</a></li>
+                <li><a href="#" data-modal="info">INFO (23.0)</a></li>
+                <li><a href="#" data-modal="about">IT-ШКОЛА</a></li>
+                <li><a href="#" data-modal="psychology">ПСИХОЛОГІЯ</a></li>
+            </ul>
+
+            <div class="search-box">
+                <button class="search-btn" aria-label="Пошук">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <line x1="20" y1="20" x2="16" y2="16"></line>
+                    </svg>
+                </button>
+                <input type="text" placeholder="Найкращий менеджер..." readonly>
+            </div>
+        </nav>
+
+
+        <div class="card-content">
+            
+       
+            <div class="left-col">
+                <h2 class="hero-title">
+                    <span>Tetiana’s</span>
+                    <span>Birthday</span>
+                </h2>
+                <p class="hero-desc">
+                    Ти вивчилася на психолога ще до того, як очолила команду! І цей бекграунд став твоєю суперсилою у школі програмування для дітей. Дякую за розуміння, підтримку та крутий менеджмент. З 23-річчям!
+                </p>
+                <div class="action-buttons">
+                    <button class="btn-rsvp" id="openWishBtn">ВІТАННЯ 🎉</button>
+                    
+                </div>
+            </div>
+
+
+            <div class="center-col">
+                <div class="sticker-wrapper">
+                    <div class="party-hat"></div>
+                    
+                    <div class="photo-cutout">
+                        <img id="tetianaPhoto" src="photo_2026-06-19_19-59-59.png" alt="Тетяна">
+                    </div>
+
+              
+                    <div class="cake-container" id="cakeWidget" title="Натисни, щоб задути свічки!">
+                        <div class="candles">
+                            <div class="candle"><span class="flame"></span></div>
+                            <div class="candle"><span class="flame"></span></div>
+                            <div class="candle"><span class="flame"></span></div>
+                            <div class="candle"><span class="flame"></span></div>
+                            <div class="candle"><span class="flame"></span></div>
+                        </div>
+                        <div class="donut-cake"></div>
+                        <span class="cake-hint">Натисни, щоб задути свічки ✨</span>
+                    </div>
+                </div>
+            </div>
+
+   
+            <div class="right-col">
+                <div class="date-badge">
+                    <div class="pink-circle"></div>
+                    <span class="day-label">LEVEL UP!</span>
+                    <span class="date-label">23<sup class="th">RD</sup> YEAR</span>
+                    <span class="time-label">100% VIBE</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-window">
+            <button class="modal-close" id="closeModalBtn">&times;</button>
+            <h3 id="modalTitle">З Днем Народження, Тетяно! 🎂</h3>
+            <div id="modalBody">
+                <p>Вітаю з 23-річчям! Твоя психологічна освіта була чудовим фундаментом ще до нашої спільної роботи в дитячій школі програмування.</p>
+                <p>Дякую за те, що була таким крутим менеджером і вміла розрулити будь-яку ситуацію з холодною головою та теплом.</p>
+            </div>
+        </div>
+    </div>
+
+ 
+    <script>
+        const modalContent = {
+            home: {
+                title: "З Днем Народження, Тетяно! 🎂",
+                body: `
+                    <p>Тобі сьогодні <strong>23</strong>! Ти почала вивчати психологію ще до того, як стала нашим менеджером в ІТ-школі для дітей.</p>
+                    <p>Цей бекграунд робив тебе не просто керівником, а справжньою підтримкою для всіх нас. Бажаю нескінченного натхнення, гармонії та крутих перспектив! ✨</p>
+                `
+            },
+            info: {
+                title: "Досьє іменинниці: Версія 23.0 🌟",
+                body: `
+                    <ul class="modal-list">
+                        <li><strong>Вік:</strong> 23 роки</li>
+                        <li><strong>Бекграунд:</strong> Спочатку психологія, потім топ-менеджмент 🧠</li>
+                        <li><strong>Досвід:</strong> Менеджер у дитячій школі програмування 💻</li>
+                        <li><strong>Суперсила:</strong> Знаходити підхід до кожного та тримати все під контролем.</li>
+                    </ul>
+                `
+            },
+            about: {
+                title: "Школа програмування для дітей 💻",
+                body: `
+                    <p>Менеджмент у дитячій ІТ-школі — справа нервова, але не тоді, коли процеси контролює людина з психологічною освітою.</p>
+                    <p>Дякуємо за твій професіоналізм, спокій та вміння об'єднувати команду!</p>
+                `
+            },
+            psychology: {
+                title: "Психологічна освіта 🧠",
+                body: `
+                    <p>Те, що ти занурилася в психологію ще раніше, дало тобі потужну базу для розуміння людей, емпатії та побудови комунікації.</p>
+                    <p>Нехай цей цінний досвід допомагає тобі у всіх життєвих починаннях!</p>
+                `
+            }
+        };
+
+        const overlay = document.getElementById('modalOverlay');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalBody = document.getElementById('modalBody');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const openWishBtn = document.getElementById('openWishBtn');
+
+        function openModal(key) {
+            const data = modalContent[key] || modalContent.home;
+            modalTitle.innerHTML = data.title;
+            modalBody.innerHTML = data.body;
+            overlay.classList.add('active');
+        }
+
+        openWishBtn.addEventListener('click', () => openModal('home'));
+        closeModalBtn.addEventListener('click', () => overlay.classList.remove('active'));
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) overlay.classList.remove('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                openModal(link.dataset.modal);
+            });
+        });
+
+
+        const cakeWidget = document.getElementById('cakeWidget');
+        cakeWidget.addEventListener('click', () => {
+            cakeWidget.classList.toggle('blown');
+            const hint = cakeWidget.querySelector('.cake-hint');
+            if (cakeWidget.classList.contains('blown')) {
+                hint.textContent = "Бажання загадано! 🎉 (натисни, щоб запалити)";
+            } else {
+                hint.textContent = "Натисни, щоб задути свічки ✨";
+            }
+        });
+
+ 
+        const photoUpload = document.getElementById('photoUpload');
+        const tetianaPhoto = document.getElementById('tetianaPhoto');
+        photoUpload.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    tetianaPhoto.src = event.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
